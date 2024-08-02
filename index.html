@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut-icon"  type="x-icon"   href="logo_1.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title> Login Page</title>
+    <link rel="stylesheet" href="style.css">
+
+ 
+
+</head>
+<body>
+
+    <div class="form" style="justify-content: center;text-align: center; border: 80px solid rgb(138, 165, 98); ">
+        <h1 style="font-size: 3rem;text-transform: uppercase;">SignUp</h1>
+        <form onsubmit="Signup(event)">
+            <input type="text" class="email" id="email" placeholder="Enter your email" style="width: 20%; color: black;"><br><br>
+            <input type="password" id="password" placeholder="Enter your password" style="width: 20%;"><br><br>
+            <button type="submit" style="width: 15%;">Submit</button><br><br>
+        </form>
+    </div>
+
+<br><br><br>
+
+
+
+    <div class="form1" style="justify-content: center;text-align: center; border: 80px solid rgb(138, 165, 98); font-style: italic; font-size: 80%;">
+        <h1 style="font-size: 3rem; text-transform: uppercase;">Login</h1>
+        <form onsubmit="Login(event)">
+            <input type="text" class="email" id="Login-email" placeholder="Enter your email" style="width: 20%;"><br><br>
+            <input type="password" id="Login-password" placeholder="Enter your password" style="width: 20%;"><br><br>
+            <button type="submit">Login</button><br><br>
+            <button onclick="Logout()">Logout</button>
+            </form>
+    </div>
+
+
+<!-- <br><br> -->
+    <hr>
+<div class="center" style="text-align: center; background: rgb(184, 184, 96);">
+    <h2 style="font-size: 2rem; text-transform: uppercase;color: black;">your account detail</h2>
+    <img src="canva.jpeg" 
+    height="auto" id="propic" width="10%"  alt="">
+     <input type="file" accept="image/*" onchange="uploadimg(event)">
+    <div id="userdetails"></div>
+</div>
+<br><br>
+<hr>
+
+<div id="model">
+    <h1 style="font-size: 2rem; text-transform: uppercase;">user deatils</h1>
+    <form  action="" id="editsprofile" onsubmit="userupdate(event)"> 
+        <input type="text" name="name" placeholder="name" style="background-color: aqua;width: 18%; color: blue; border: none; border-radius: 20% solid transparent;"><br><br>
+        <input type="email" name="email" placeholder="email" style="background-color: wheat;width: 18%;  color: blue; border: none;"><br><br>
+        <input type="number" name="phone" placeholder=" phone number" style="background-color: pink;width: 18%;  color: blue; border: none;"><br><br>
+        <input type="text" name="speciality" placeholder="speciality" style="background-color: rgb(194, 194, 194);width: 18%;  color: blue; border: none;"><br><br>
+        <input type="text" name="portfolioUrl" placeholder="portfolioUrl" style="background-color: rgb(154, 207, 101);width: 18%;  color: blue; border: none;"><br><br>
+        <input type="text" name="gender" placeholder="gender" style="background-color: beige; color: blue;width: 18%;  border: none; "><br><br>
+        <button>SUBMIT</button>
+        
+        
+    </form>
+</div>
+ <script src="index.js"></script>
+    <script src="firebase_db.js"></script>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+
+
+    <script>
+          const firebaseConfig = {
+    apiKey: "AIzaSyAes7-1xYQx1c5ika9k9ZBpXosn5Qtdn8s",
+    authDomain: "login-page-6f8ab.firebaseapp.com",
+    projectId: "login-page-6f8ab",
+    storageBucket: "login-page-6f8ab.appspot.com",
+    messagingSenderId: "925555503707",
+    appId: "1:925555503707:web:072075abcf97fc8e2e057e",
+    measurementId: "G-HB3N4GPKJ9"
+
+    // apiKey: "AIzaSyCVgtq-yBbKM14wZnxQYUNFPCdHW2ha3oI",
+    // authDomain: "restart-firebase-58af7.firebaseapp.com",
+    // projectId: "restart-firebase-58af7",
+    // storageBucket: "restart-firebase-58af7.appspot.com",
+    // messagingSenderId: "503398698939",
+    // appId: "1:503398698939:web:e4ac0ff303d1c9016b7e9e",
+    // measurementId: "G-BC5E7YTEQJ"
+  
+  };
+
+  firebase.initializeApp(firebaseConfig);
+    </script>
+
+    
+</body>
+</html>
